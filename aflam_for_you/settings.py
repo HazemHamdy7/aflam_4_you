@@ -118,9 +118,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-# SITE_ID = 1
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+]
 
-# AUTH_USER_MODEL = 'netflixapp.CustomUser'
+# SITE_ID = 1
+AUTH_USER_MODEL = 'aflam_app.CustomUser'
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
@@ -134,6 +137,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # ACCOUNT_EMAIL_REQUIRED = True
 # ACCOUNT_EMAIL_VERIFICATION = 'none'
 # ACCOUNT_USERNAME_REQUIRED = False
+
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
